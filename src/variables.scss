@@ -5,4 +5,27 @@ $accent1Light: #759CBF;
 $primaryLight: #BFB9AE;
 $primaryDark: #735E51;
 
-$accent2: #ee911e
+$accent2: #ee911e;
+
+$xsmBreakpoint: 375px;
+$smBreakpoint: 768px;
+$mdBreakpoint: 1024px;
+$lgBreakpoint: 1200px;
+
+@mixin for-phone {
+  @media screen and (max-width: $xsmBreakpoint) {
+    @content
+  }
+}
+
+@mixin for-tablet-portrait {
+  @media screen and (max-width: $smBreakpoint) and (min-width: $xsmBreakpoint + 1) {
+    @content
+  }
+}
+
+@mixin for-tablet-landscape {
+  @media screen and (max-width: $mdBreakpoint) and (min-width: $smBreakpoint + 1) {
+    @content
+  }
+}

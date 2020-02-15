@@ -1,3 +1,5 @@
+@import "src/variables";
+
 .TextBlock {
   display: flex;
   flex-direction: column;
@@ -7,4 +9,7 @@
 
   text-align: center;
 
+  @include for-phone {
+    padding: 5px 10px;
+  }
 }
