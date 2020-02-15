@@ -1,9 +1,18 @@
 import {LoremIpsum} from "lorem-ipsum";
 import React from 'react';
 import './App.scss';
-import paralaxImage1 from './assets/1.jpg'
-import paralaxImage2 from './assets/2.jpg'
-import paralaxImage3 from './assets/3.jpg'
+import paralaxImage1lg from './assets/1-lg.jpg'
+import paralaxImage1md from './assets/1-md.jpg'
+import paralaxImage1sm from './assets/1-sm.jpg'
+import paralaxImage1xsm from './assets/1-xsm.jpg'
+import paralaxImage2lg from './assets/2-lg.jpg'
+import paralaxImage2md from './assets/2-md.jpg'
+import paralaxImage2sm from './assets/2-sm.jpg'
+import paralaxImage2xsm from './assets/2-xsm.jpg'
+import paralaxImage3lg from './assets/3-lg.jpg'
+import paralaxImage3md from './assets/3-md.jpg'
+import paralaxImage3sm from './assets/3-sm.jpg'
+import paralaxImage3xsm from './assets/3-xsm.jpg'
 import ParalaxWrapper from "./components/ParalaxWrapper/ParalaxWrapper";
 import TextBlock from "./components/TextBlock/TextBlock";
 import {capitalize} from "./utils/utils";
@@ -48,12 +57,33 @@ const textBlock1Text = lorem.generateSentences(textBlockTextSentencesCount);
 const textBlock2Text = lorem.generateSentences(textBlockTextSentencesCount);
 const textBlock3Text = lorem.generateSentences(textBlockTextSentencesCount);
 
+const paralax1Images = {
+    lg: paralaxImage1lg,
+    md: paralaxImage1md,
+    sm: paralaxImage1sm,
+    xsm: paralaxImage1xsm
+};
+
+const paralax2Images = {
+    lg: paralaxImage2lg,
+    md: paralaxImage2md,
+    sm: paralaxImage2sm,
+    xsm: paralaxImage2xsm
+};
+
+const paralax3Images = {
+    lg: paralaxImage3lg,
+    md: paralaxImage3md,
+    sm: paralaxImage3sm,
+    xsm: paralaxImage3xsm
+};
+
 // endregion
 
 function App() {
     return (
         <div className="App">
-            <ParalaxWrapper image={paralaxImage1} className={primaryParalaxClasses}>
+            <ParalaxWrapper images={paralax1Images} className={primaryParalaxClasses}>
                 <h1 className="App_paralax-title">{paralaxBlock1Title}</h1>
             </ParalaxWrapper>
 
@@ -62,7 +92,7 @@ function App() {
                 <p>{textBlock1Text}</p>
             </TextBlock>
 
-            <ParalaxWrapper image={paralaxImage2} className={secondaryParalaxClasses}>
+            <ParalaxWrapper images={paralax2Images} className={secondaryParalaxClasses}>
                 <h1 className="App_paralax-title">{paralaxBlock2Title}</h1>
             </ParalaxWrapper>
 
@@ -71,7 +101,7 @@ function App() {
                 <p>{textBlock2Text}</p>
             </TextBlock>
 
-            <ParalaxWrapper image={paralaxImage3} className={secondaryParalaxClasses}>
+            <ParalaxWrapper images={paralax3Images} className={secondaryParalaxClasses}>
                 <h1 className="App_paralax-title">{paralaxBlock3Title}</h1>
             </ParalaxWrapper>
 
@@ -80,7 +110,7 @@ function App() {
                 <p>{textBlock3Text}</p>
             </TextBlock>
 
-            <ParalaxWrapper image={paralaxImage1} className={primaryParalaxClasses}>
+            <ParalaxWrapper images={paralax1Images} className={primaryParalaxClasses}>
                 <h1 className="App_paralax-title">{paralaxBlock4Title}</h1>
             </ParalaxWrapper>
         </div>
