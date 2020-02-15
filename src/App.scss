@@ -1,0 +1,34 @@
+@import "variables";
+
+.App {
+  text-align: center;
+}
+
+.App_paralax__primary {
+  height: 100vh;
+}
+
+.App_paralax__secondary {
+  height: 65vh;
+}
+
+.Text-block__primary {
+  background-color: $accent1;
+  color: $primaryLight;
+}
+
+.Text-block__secondary {
+  background-color: $primaryLight;
+  color: $accent1;
+}
+
+.App_paralax-title {
+  background-color: $accent1Dark;
+  color: $accent1Light;
+
+  font-size: 2.5rem;
+  letter-spacing: .8rem;
+  padding: .5rem;
+  text-transform: uppercase;
+
+}
