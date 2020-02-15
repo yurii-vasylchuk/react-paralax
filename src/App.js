@@ -13,6 +13,7 @@ import paralaxImage3lg from './assets/3-lg.jpg'
 import paralaxImage3md from './assets/3-md.jpg'
 import paralaxImage3sm from './assets/3-sm.jpg'
 import paralaxImage3xsm from './assets/3-xsm.jpg'
+import Footer from "./components/Footer/Footer";
 import ParalaxWrapper from "./components/ParalaxWrapper/ParalaxWrapper";
 import TextBlock from "./components/TextBlock/TextBlock";
 import {capitalize} from "./utils/utils";
@@ -113,6 +114,8 @@ function App() {
             <ParalaxWrapper images={paralax1Images} className={primaryParalaxClasses}>
                 <h1 className="App_paralax-title">{paralaxBlock4Title}</h1>
             </ParalaxWrapper>
+
+            <Footer/>
         </div>
     );
 }
